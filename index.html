@@ -9,7 +9,7 @@
   <title>Pega'o — Conecta en Miami</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light dark;
@@ -51,7 +51,7 @@
       overflow-x: hidden;
       background: var(--bg);
       color: var(--ink);
-      font-family: "DM Sans", sans-serif;
+      font-family: Inter, "DM Sans", sans-serif;
       line-height: 1.55;
     }
     a { color: inherit; }
@@ -88,8 +88,8 @@
       margin: 0 0 18px;
     }
     .kicker::before { content: ""; width: 29px; height: 3px; border-radius: 3px; background: var(--coral); }
-    h1, h2, h3 { font-family: "Bricolage Grotesque", sans-serif; letter-spacing: -.035em; line-height: 1.02; margin-top: 0; }
-    h1 { font-size: clamp(3.2rem, 6.2vw, 5.9rem); max-width: 760px; margin-bottom: 25px; font-weight: 800; font-stretch: 75%; }
+    h1, h2, h3 { font-family: Inter, "Bricolage Grotesque", sans-serif; letter-spacing: -.03em; line-height: 1.15; margin-top: 0; font-weight: 700; }
+    h1 { font-size: clamp(2.6rem, 5.4vw, 4.2rem); max-width: 760px; margin-bottom: 25px; }
     h1 span { color: var(--coral); position: relative; white-space: nowrap; }
     h1 span::after { content: ""; position: absolute; left: 2%; right: 2%; bottom: -.05em; height: .12em; background: var(--sun); transform: rotate(-2deg); z-index: -1; }
     .lead { font-size: clamp(1.08rem, 1.8vw, 1.28rem); color: var(--muted); max-width: 570px; margin: 0 0 24px; }
@@ -118,12 +118,12 @@
     .spark { position: absolute; z-index: 3; width: 72px; height: 72px; right: -18px; top: -24px; color: var(--coral); transform: rotate(12deg); }
     .section { padding: 100px 0; }
     .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 48px; margin-bottom: 45px; align-items: end; }
-    .section-head h2 { font-size: clamp(2.5rem, 5.4vw, 5.1rem); margin: 0; }
+    .section-head h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); margin: 0; font-weight: 700; }
     .section-head p { color: var(--muted); max-width: 580px; font-size: 1.12rem; margin: 0 0 8px; }
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--line); }
     .step { padding: 32px 28px 24px 0; position: relative; }
     .step + .step { border-left: 2px solid var(--line); padding-left: 28px; }
-    .num { font: 800 3.6rem/1 "Bricolage Grotesque", sans-serif; color: var(--rose); display: block; margin-bottom: 28px; }
+    .num { font: 700 2.4rem/1 Inter, sans-serif; color: var(--coral); display: block; margin-bottom: 16px; }
     .step h3 { font-size: 1.5rem; margin-bottom: 10px; }
     .step p { color: var(--muted); margin: 0; }
     .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 44px; border-bottom: 1px solid var(--line); }
@@ -131,38 +131,46 @@
     .feature-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--soft-orange); color: var(--coral); }
     .feature-icon svg { width: 23px; height: 23px; }
     .feature h3 { font-size: 1.24rem; margin: 2px 0 6px; }
-    .feature p { color: var(--muted); margin: 0; font-size: .96rem; }
+    .feature p { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.65; }
     .picture-break { width: min(1280px, calc(100% - 24px)); margin: 30px auto 0; display: grid; grid-template-columns: 1.22fr .78fr; min-height: 520px; background: var(--navy); color: #fff; border-radius: 12px; overflow: hidden; }
     .picture-break img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
     .picture-copy { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
-    .picture-copy h2 { font-size: clamp(2.6rem, 5vw, 4.8rem); margin-bottom: 20px; }
-    .picture-copy p { color: #dbe5ef; font-size: 1.1rem; }
+    .picture-copy h2 { font-size: clamp(1.85rem, 3.6vw, 2.6rem); margin-bottom: 20px; font-weight: 700; }
+    .picture-copy p { color: #dbe5ef; font-size: 15px; line-height: 1.7; }
     .pill-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
     .pill { padding: 8px 12px; border: 1px solid #63758a; border-radius: 999px; font-size: .88rem; }
     .safe-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: center; }
     .safe-image { position: relative; }
     .safe-image img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px 36px 8px 36px; box-shadow: var(--shadow); }
     .safe-image::after { content: "♥"; position: absolute; right: -24px; bottom: -28px; width: 80px; height: 80px; display: grid; place-items: center; border-radius: 50%; background: var(--sun); color: var(--navy); font-size: 2rem; border: 5px solid var(--bg); }
-    .safe-copy h2 { font-size: clamp(2.5rem, 5vw, 4.8rem); margin-bottom: 20px; }
-    .safe-copy > p { color: var(--muted); font-size: 1.12rem; }
+    .safe-copy h2 { font-size: clamp(1.85rem, 3.8vw, 2.6rem); margin-bottom: 20px; font-weight: 700; }
+    .safe-copy > p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+    .pillar-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 14px; display: flex; gap: 12px; align-items: flex-start; }
+    .pillar-icon { font-size: 22px; line-height: 1; }
+    .pillar-card strong { display: block; font-weight: 600; font-size: 14px; }
+    .pillar-card span { display: block; color: var(--muted); font-size: 13px; line-height: 1.45; margin-top: 4px; }
     .principles { margin-top: 28px; }
     .principle { display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 17px 0; border-top: 1px solid var(--line); }
     .principle svg { width: 28px; color: var(--coral); }
     .principle strong { display: block; margin-bottom: 3px; }
     .principle span { color: var(--muted); font-size: .95rem; }
-    .privacy { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .privacy-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 64px; align-items: start; }
-    .privacy h2 { font-size: clamp(2.5rem, 5vw, 4.8rem); margin-bottom: 18px; }
-    .privacy-intro { color: var(--muted); font-size: 1.08rem; margin: 0; }
-    .privacy-points { display: grid; gap: 0; }
-    .privacy-point { padding: 22px 0; border-top: 1px solid var(--line); }
-    .privacy-point:first-child { border-top: 0; padding-top: 4px; }
-    .privacy-point h3 { font-size: 1.2rem; margin-bottom: 7px; }
-    .privacy-point p { color: var(--muted); margin: 0; }
-    .privacy-contact { display: inline-block; margin-top: 8px; color: var(--coral-dark); font-weight: 750; }
+    .privacy, .terms { background: #f4eee9; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .privacy-pro, .terms-pro { max-width: 720px; margin: 0 auto; }
+    .privacy h2, .terms h2 { font-size: clamp(1.7rem, 3.4vw, 2.2rem); margin: 8px 0 10px; font-weight: 700; line-height: 1.25; }
+    .privacy-pro > p, .terms-pro > p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0 0 8px; }
+    .privacy-card, .terms-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; margin-top: 20px; box-shadow: 0 8px 24px rgba(42, 28, 20, .05); }
+    .privacy-card:first-of-type, .terms-card:first-of-type { margin-top: 32px; }
+    .privacy-card h3, .terms-card h3 { font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0; line-height: 1.3; margin: 0 0 10px; }
+    .privacy-card p, .terms-card p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0; }
+    .privacy-contact { display: inline-block; margin-top: 8px; color: var(--coral-dark); font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .privacy, .terms { background: #120e0c; }
+      .privacy-card, .terms-card { background: var(--surface); }
+    }
     .manifesto { background: var(--coral); color: #fff; padding: 95px 0; margin-top: 30px; }
     .manifesto-inner { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
-    .manifesto h2 { font-size: clamp(3rem, 7vw, 7rem); max-width: 920px; margin: 0; }
+    .manifesto h2 { font-size: clamp(2rem, 5vw, 3.2rem); max-width: 920px; margin: 0; font-weight: 700; }
     .round-link { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; background: var(--sun); color: var(--navy); text-decoration: none; font-weight: 800; text-align: center; transform: rotate(-7deg); border: 3px solid var(--navy); transition: transform .2s ease; }
     .round-link:hover { transform: rotate(0deg); }
     footer { padding: 35px 0; }
@@ -206,7 +214,9 @@
       .section-head h2,
       .safe-copy h2,
       .picture-copy h2,
-      .privacy h2 { font-size: clamp(1.65rem, 8vw, 2.2rem); }
+      .privacy h2,
+      .terms h2 { font-size: clamp(1.55rem, 7vw, 2rem); }
+      .pillars { grid-template-columns: 1fr; }
       .manifesto h2 { font-size: clamp(1.8rem, 9vw, 2.4rem); }
       .step { grid-template-columns: 48px 1fr; gap: 10px; padding: 18px 0; }
       .num { font-size: 2rem; }
@@ -392,40 +402,62 @@
     </section>
 
     <section class="section privacy" id="privacidad" aria-labelledby="privacy-title">
-<div class="wrap">
+<div class="wrap privacy-pro">
 <p class="kicker" data-i18n="privacidad_kicker">Política de Privacidad</p>
 <h2 id="privacy-title" data-i18n="privacidad_title">Tus datos, explicados sin vueltas.</h2>
 <p data-i18n="privacidad_updated">Última actualización: 8 de octubre de 2026.</p>
 <p data-i18n="privacidad_intro">Pega'o es una app de citas hecha en Miami, Florida, para personas mayores de 18 años. Esta política explica qué información recogemos, cómo la usamos y qué control tienes sobre ella, tanto en la app como en pegaousa.com.</p>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h1">Datos que recogemos</h3>
 <p data-i18n="privacidad_p1">Datos de cuenta: nombre, username, email y contraseña. Datos de perfil: biografía, género, fecha de nacimiento, fotos, intereses y canción favorita. Ubicación: para mostrarte personas cerca de ti y orientar el descubrimiento. Contenido: mensajes, selfie de verificación y estado de verificación. Seguridad: tus listas de bloqueos y reportes, además de tus preferencias en el dispositivo.</p>
+</div>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h2">Para qué los usamos</h3>
 <p data-i18n="privacidad_p2">Para crear y mostrar tu perfil, confirmar que tienes 18 años o más, orientar el descubrimiento por distancia y edad, permitir matches, chat y la ayuda de Cupido, gestionar la seguridad de la comunidad y mejorar la experiencia.</p>
+</div>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h3">Con quién los compartimos</h3>
 <p data-i18n="privacidad_p3">Con proveedores que nos ayudan a operar el servicio (alojamiento, Firebase, autenticación y almacenamiento de Google) y con las autoridades cuando la ley lo exija. No vendemos tu información personal.</p>
+</div>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h4">Tu control</h3>
 <p data-i18n="privacidad_p4">Puedes ver, corregir y eliminar tu información. Usa “Borrar cuenta” en tu perfil para eliminar tu cuenta y los datos asociados. Para cualquier solicitud de privacidad, escríbenos a privacidad@pegaousa.com.</p>
+</div>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h5">Menores de 18 años</h3>
 <p data-i18n="privacidad_p5">Pega'o es exclusivamente para personas mayores de 18 años. Si detectamos una cuenta de un menor, la cerraremos.</p>
+</div>
+<div class="privacy-card">
 <h3 data-i18n="privacidad_h6">Contacto</h3>
 <p data-i18n="privacidad_p6">Para preguntas sobre esta política o tus datos: privacidad@pegaousa.com.</p>
 </div>
+</div>
 </section>
 <section class="section terms" id="terminos" aria-labelledby="terms-title">
-<div class="wrap">
+<div class="wrap terms-pro">
 <p class="kicker" data-i18n="terminos_kicker">Términos de Uso</p>
 <h2 id="terms-title" data-i18n="terminos_title">Reglas claras para todos.</h2>
 <p data-i18n="terminos_intro">Al usar Pega'o aceptas estos términos. Si no estás de acuerdo, no uses el servicio.</p>
+<div class="terms-card">
 <h3 data-i18n="terminos_h1">Edad y cuenta</h3>
 <p data-i18n="terminos_p1">Debes tener 18 años o más, mantener una sola cuenta y dar información veraz en tu perfil.</p>
+</div>
+<div class="terms-card">
 <h3 data-i18n="terminos_h2">Comportamiento</h3>
 <p data-i18n="terminos_p2">Está prohibido el acoso, el spam, los perfiles falsos, el contenido no consentido y la discriminación. Puedes bloquear y reportar desde la app; las cuentas que violen estas reglas pueden ser suspendidas.</p>
+</div>
+<div class="terms-card">
 <h3 data-i18n="terminos_h3">Tu contenido</h3>
 <p data-i18n="terminos_p3">Eres responsable de lo que publicas. Al subir fotos y textos nos das permiso para mostrarlos dentro de Pega'o.</p>
+</div>
+<div class="terms-card">
 <h3 data-i18n="terminos_h4">El servicio</h3>
 <p data-i18n="terminos_p4">Pega'o está en crecimiento activo: las funciones pueden cambiar o mejorar. El servicio se ofrece tal cual, sin garantías más allá de lo que exija la ley.</p>
+</div>
+<div class="terms-card">
 <h3 data-i18n="terminos_h5">Contacto</h3>
 <p data-i18n="terminos_p5">Dudas sobre estos términos: privacidad@pegaousa.com.</p>
+</div>
 </div>
 </section>
 
