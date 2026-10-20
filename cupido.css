@@ -1,45 +1,31 @@
 .cupido-float{
-  position:fixed;right:20px;bottom:20px;z-index:80;width:58px;height:58px;border:0;
-  border-radius:50%;background:var(--coral);color:#fff;font-size:26px;cursor:pointer;
-  box-shadow:0 10px 28px rgba(255,77,0,.4);
+  position:fixed;right:24px;bottom:24px;z-index:80;width:56px;height:56px;border:0;
+  border-radius:50%;background:#FF5A1F;color:#fff;font-size:24px;cursor:pointer;
+  box-shadow:0 8px 24px rgba(255,90,31,.35);
 }
 .cupido-float:hover{transform:scale(1.06)}
 .cupido-box{
-  display:none;position:fixed;right:20px;bottom:88px;z-index:80;width:min(340px,calc(100vw - 24px));
-  height:min(420px,62vh);background:var(--surface);color:var(--ink);border:1px solid var(--line);
-  border-radius:18px;box-shadow:var(--shadow);flex-direction:column;overflow:hidden;
+  display:none;position:fixed;right:24px;bottom:92px;z-index:80;
+  width:min(360px,calc(100vw - 24px));
+  height:320px;max-height:320px;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);
+  border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,.12);
+  flex-direction:column;overflow:hidden;
 }
 .cupido-box.on{display:flex}
 .cupido-hd{
   display:flex;justify-content:space-between;align-items:center;padding:12px 14px;
-  background:var(--coral);color:#fff;font-weight:800;
+  background:#FF5A1F;color:#fff;font-weight:700;
 }
 .cupido-hd button{background:none;border:0;color:#fff;font-size:22px;cursor:pointer}
 .cupido-msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
 .cupido-msg{max-width:90%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.4}
 .cupido-msg.bot{background:var(--soft-orange);align-self:flex-start}
-.cupido-msg.me{background:var(--coral);color:#fff;align-self:flex-end}
+.cupido-msg.me{background:#FF5A1F;color:#fff;align-self:flex-end}
 .cupido-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
 .cupido-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:16px}
-.cupido-form button{border:0;border-radius:12px;background:var(--coral);color:#fff;font-weight:800;padding:10px 14px;cursor:pointer}
+.cupido-form button{border:0;border-radius:12px;background:#FF5A1F;color:#fff;font-weight:700;padding:10px 14px;cursor:pointer}
 @media (max-width: 820px){
-  .cupido-float{width:48px;height:48px;right:12px;bottom:12px;font-size:20px}
-  .cupido-box{
-    right:12px;left:auto;bottom:72px;
-    width:min(300px,calc(100vw - 24px));
-    height:min(38vh,300px);max-height:300px;
-    border-radius:14px;
-  }
-  .cupido-hd{padding:10px 12px}
-  .cupido-hd b{font-size:13px}
-  .cupido-msgs{padding:10px}
-  .cupido-msg{font-size:13px;padding:8px 10px}
-  .cupido-form{padding:8px}
-  .cupido-form button{padding:9px 12px;font-size:13px}
-}
-@media (max-width: 420px){
-  .cupido-box{
-    height:min(34vh,260px);max-height:260px;
-    width:min(280px,calc(100vw - 24px));
-  }
+  .cupido-float{right:16px;bottom:16px}
+  .cupido-box{right:16px;bottom:84px;width:min(360px,calc(100vw - 24px));height:320px;max-height:320px}
 }

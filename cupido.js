@@ -93,7 +93,11 @@
   if (!btn || !panel || !form) return;
 
   var greeted = false;
+  function closeBox() {
+    panel.classList.remove("on");
+  }
   function openBox() {
+    if (shouldMinimize()) return;
     panel.classList.add("on");
     if (!greeted) {
       bubble(
@@ -108,14 +112,23 @@
     }
     input.focus();
   }
+  function shouldMinimize() {
+    var h = (location.hash || "").toLowerCase();
+    return h === "#privacidad" || h === "#reglas" || h === "#terminos";
+  }
+  function onHash() {
+    if (shouldMinimize()) closeBox();
+  }
+
+  closeBox();
+  window.addEventListener("hashchange", onHash);
+  window.addEventListener("popstate", onHash);
 
   btn.addEventListener("click", function () {
-    if (panel.classList.contains("on")) panel.classList.remove("on");
+    if (panel.classList.contains("on")) closeBox();
     else openBox();
   });
-  close.addEventListener("click", function () {
-    panel.classList.remove("on");
-  });
+  close.addEventListener("click", closeBox);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();

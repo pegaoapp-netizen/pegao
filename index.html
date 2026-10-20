@@ -113,8 +113,7 @@
     .button.secondary { background: transparent; }
     .button:hover { transform: translate(-2px, -2px); }
     .hero-art { position: relative; }
-    .hero-art::before { content: ""; position: absolute; inset: -22px 25% 18% -26px; background: var(--sun); border-radius: 45% 12% 42% 18%; transform: rotate(-3deg); }
-    .hero-art img { position: relative; width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 38px 8px 38px 8px; box-shadow: var(--shadow); }
+    .hero-art img { position: relative; width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: 28px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .spark { position: absolute; z-index: 3; width: 72px; height: 72px; right: -18px; top: -24px; color: var(--coral); transform: rotate(12deg); }
     .section { padding: 100px 0; }
     .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 48px; margin-bottom: 45px; align-items: end; }
@@ -204,8 +203,7 @@
       .kicker { font-size: .82rem; margin-bottom: 10px; }
       .hero { padding: 16px 0 40px; gap: 22px; }
       .hero-art { width: 100%; margin-left: 0; }
-      .hero-art::before { inset: -10px 16% 20% -10px; }
-      .hero-art img { border-radius: 20px 6px 20px 6px; }
+      .hero-art img { border-radius: 28px; }
       .spark { width: 44px; height: 44px; right: 0; top: -10px; }
       .age-note { font-size: .82rem; padding: 8px 10px; }
       .button { width: 100%; min-height: 46px; padding: 12px 16px; }
@@ -229,7 +227,8 @@
       .manifesto { padding: 48px 0 72px; }
       .round-link { width: 84px; height: 84px; font-size: .85rem; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
-      #fundadores > div { padding: 24px 16px !important; }
+      #fundadores { margin-top: 48px; margin-bottom: 48px; }
+      #fundadores > div { padding: 48px 20px !important; max-width: 800px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -268,8 +267,8 @@
     </section>
 
     
-<section class="wrap section" id="fundadores" aria-labelledby="fund-title" style="padding-top:10px">
-      <div style="background:#FF4D00;border-radius:20px;text-align:center;padding:40px 24px;max-width:600px;margin:0 auto;box-shadow:0 10px 30px rgba(255,77,0,.25)">
+<section class="wrap section" id="fundadores" aria-labelledby="fund-title" style="margin-top:80px;margin-bottom:80px;padding:0">
+      <div style="background:#FF4D00;border-radius:20px;text-align:center;padding:80px 24px;max-width:800px;margin:0 auto;box-shadow:0 10px 30px rgba(255,77,0,.25)">
         <p data-i18n="kFundKick" style="color:#fff;opacity:.9;margin:0 0 8px;font-weight:800;letter-spacing:1px;font-size:13px">⭐ PROGRAMA FUNDADORES</p>
         <h2 id="fund-title" data-i18n="kFundT" style="color:#fff;font-size:30px;margin:0 0 10px">Sé de los primeros 500 en tu ciudad</h2>
         <p data-i18n="kFundSub" style="color:#fff;opacity:.95;margin:0 0 18px;font-size:17px">Premium gratis de por vida para los primeros 500 con perfil completo y verificado.</p>
@@ -281,10 +280,10 @@
         <p data-i18n="kFundReq" style="color:#fff;opacity:.85;margin:0 0 22px;font-size:13px">Requisito: completa tu perfil y verifica tu identidad con una selfie en la app.</p>
         <form id="form-pegao" style="margin:0">
           <input type="hidden" name="fuente" value="fundadores">
-          <input type="text" name="nombre" required data-i18n-ph="kVipName" placeholder="Tu nombre" aria-label="Nombre" style="width:100%;padding:14px;border-radius:12px;border:none;margin-bottom:12px;font-size:16px;box-sizing:border-box">
-          <input type="tel" name="whatsapp" required data-i18n-ph="kVipWa" placeholder="Tu WhatsApp (305...)" aria-label="WhatsApp" style="width:100%;padding:14px;border-radius:12px;border:none;margin-bottom:12px;font-size:16px;box-sizing:border-box">
-          <input type="email" name="email" data-i18n-ph="kVipEmail" placeholder="Tu email" aria-label="Email" style="width:100%;padding:14px;border-radius:12px;border:none;margin-bottom:16px;font-size:16px;box-sizing:border-box">
-          <button type="submit" data-i18n="kFundBtn" style="width:100%;padding:14px;background:#111;color:#fff;border:none;border-radius:12px;font-weight:800;font-size:16px;cursor:pointer">QUIERO SER FUNDADOR →</button>
+          <input type="text" name="nombre" required data-i18n-ph="kVipName" placeholder="Tu nombre" aria-label="Nombre" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:12px;font-size:16px;box-sizing:border-box">
+          <input type="tel" name="whatsapp" required data-i18n-ph="kVipWa" placeholder="Tu WhatsApp (305...)" aria-label="WhatsApp" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:12px;font-size:16px;box-sizing:border-box">
+          <input type="email" name="email" data-i18n-ph="kVipEmail" placeholder="Tu email" aria-label="Email" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:16px;font-size:16px;box-sizing:border-box">
+          <button type="submit" data-i18n="kFundBtn" style="width:100%;padding:14px;background:#FF5A1F;color:#fff;border:none;border-radius:12px;font-weight:800;font-size:16px;cursor:pointer">QUIERO SER FUNDADOR →</button>
         </form>
         <p id="vip-ok" data-i18n="kFundOk" style="display:none;color:#fff;margin:15px 0 0;font-weight:700">¡Listo! Te avisamos por WhatsApp el día del lanzamiento para que reclames tu puesto de Fundador.</p>
       </div>
