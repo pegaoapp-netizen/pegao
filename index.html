@@ -163,6 +163,44 @@
     .privacy-card h3, .terms-card h3 { font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0; line-height: 1.3; margin: 0 0 10px; }
     .privacy-card p, .terms-card p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0; }
     .privacy-contact { display: inline-block; margin-top: 8px; color: var(--coral-dark); font-weight: 600; }
+    .fundadores-box {
+      background: #FF4D00;
+      color: #fff;
+      border-radius: 20px;
+      text-align: center;
+      padding: 80px 24px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(255,77,0,.25);
+    }
+    .fundadores-box h2 { color: #fff; font-size: 30px; margin: 0 0 12px; font-weight: 700; }
+    .fundadores-box > p { margin: 0 0 14px; font-size: 17px; }
+    .fundadores-box ul { list-style: none; padding: 0; margin: 0 auto 18px; text-align: left; max-width: 560px; }
+    .fundadores-box li { margin: 0 0 10px; font-size: 15px; line-height: 1.45; }
+    .fundadores-box input,
+    .fundadores-box select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: #fff;
+      color: #191919;
+      margin-bottom: 12px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .fundadores-box button {
+      width: 100%;
+      padding: 14px;
+      background: #FF5A1F;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #successMsg { margin-top: 16px; font-weight: 700; line-height: 1.5; }
     @media (prefers-color-scheme: dark) {
       .privacy, .terms { background: #120e0c; }
       .privacy-card, .terms-card { background: var(--surface); }
@@ -228,7 +266,7 @@
       .round-link { width: 84px; height: 84px; font-size: .85rem; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
       #fundadores { margin-top: 48px; margin-bottom: 48px; }
-      #fundadores > div { padding: 48px 20px !important; max-width: 800px; }
+      .fundadores-box { padding: 48px 20px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -268,42 +306,86 @@
 
     
 <section class="wrap section" id="fundadores" aria-labelledby="fund-title" style="margin-top:80px;margin-bottom:80px;padding:0">
-      <div style="background:#FF4D00;border-radius:20px;text-align:center;padding:80px 24px;max-width:800px;margin:0 auto;box-shadow:0 10px 30px rgba(255,77,0,.25)">
-        <p data-i18n="kFundKick" style="color:#fff;opacity:.9;margin:0 0 8px;font-weight:800;letter-spacing:1px;font-size:13px">⭐ PROGRAMA FUNDADORES</p>
-        <h2 id="fund-title" data-i18n="kFundT" style="color:#fff;font-size:30px;margin:0 0 10px">Sé de los primeros 500 en tu ciudad</h2>
-        <p data-i18n="kFundSub" style="color:#fff;opacity:.95;margin:0 0 18px;font-size:17px">Premium gratis de por vida para los primeros 500 con perfil completo y verificado.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 18px;text-align:left;display:inline-block">
-          <li data-i18n="kFundB1" style="color:#fff;margin:0 0 8px;font-size:15px">👑 Premium de por vida, sin pagar nunca</li>
-          <li data-i18n="kFundB2" style="color:#fff;margin:0 0 8px;font-size:15px">🏅 Insignia dorada de Fundador en tu perfil</li>
-          <li data-i18n="kFundB3" style="color:#fff;margin:0 0 8px;font-size:15px">🚀 Entra antes que nadie el día del lanzamiento</li>
-        </ul>
-        <p data-i18n="kFundReq" style="color:#fff;opacity:.85;margin:0 0 22px;font-size:13px">Requisito: completa tu perfil y verifica tu identidad con una selfie en la app.</p>
-        <form id="form-pegao" style="margin:0">
-          <input type="hidden" name="fuente" value="fundadores">
-          <input type="text" name="nombre" required data-i18n-ph="kVipName" placeholder="Tu nombre" aria-label="Nombre" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:12px;font-size:16px;box-sizing:border-box">
-          <input type="tel" name="whatsapp" required data-i18n-ph="kVipWa" placeholder="Tu WhatsApp (305...)" aria-label="WhatsApp" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:12px;font-size:16px;box-sizing:border-box">
-          <input type="email" name="email" data-i18n-ph="kVipEmail" placeholder="Tu email" aria-label="Email" style="width:100%;padding:14px;border-radius:12px;border:none;background:#fff;margin-bottom:16px;font-size:16px;box-sizing:border-box">
-          <button type="submit" data-i18n="kFundBtn" style="width:100%;padding:14px;background:#FF5A1F;color:#fff;border:none;border-radius:12px;font-weight:800;font-size:16px;cursor:pointer">QUIERO SER FUNDADOR →</button>
-        </form>
-        <p id="vip-ok" data-i18n="kFundOk" style="display:none;color:#fff;margin:15px 0 0;font-weight:700">¡Listo! Te avisamos por WhatsApp el día del lanzamiento para que reclames tu puesto de Fundador.</p>
-      </div>
-    </section>
-    <script>
-    (function(){
-      var VIP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwBrbxMRxuEqhYoZ3ISibOrd0f2y1lQc5zOKkZyZxsk6_CgVcZCe0VS84RTJ5mF9ser/exec';
-      var form = document.getElementById('form-pegao');
-      if(!form) return;
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        if(VIP_SCRIPT_URL.indexOf('PEGA_TU_URL') === 0){ alert('Formulario en configuración — vuelve pronto.'); return; }
-        var btn = form.querySelector('button[type=submit]');
-        btn.disabled = true;
-        fetch(VIP_SCRIPT_URL, { method: 'POST', body: new FormData(form) })
-          .then(function(){ form.style.display = 'none'; document.getElementById('vip-ok').style.display = 'block'; })
-          .catch(function(){ btn.disabled = false; alert('Hubo un problema, intenta de nuevo.'); });
-      });
-    })();
-    </script>
+<div class="fundadores-box">
+  <p>⭐ PROGRAMA FUNDADORES</p>
+  <h2 id="fund-title">Sé de los primeros 500 en tu ciudad</h2>
+  <p>Reserva tu lugar. Beneficios según orden de llegada:</p>
+  <ul>
+    <li>🥇 1-100 ORO: Premium de por vida + insignia dorada + acceso primero</li>
+    <li>🥈 101-300 PLATA: 6 meses premium gratis + 50% dto de por vida</li>
+    <li>🥉 301-500 BRONCE: 3 meses premium gratis + 30% dto de por vida</li>
+  </ul>
+  <p style="font-size:12px; opacity:0.8;">Requisito: completa y verifica tu perfil con selfie en la app dentro de los primeros 7 días del lanzamiento. Si no, tu cupo pasa al siguiente.</p>
+  <select id="citySelect">
+    <option value="miami">Miami</option>
+    <option value="tampa">Tampa</option>
+    <option value="cape-coral">Cape Coral</option>
+  </select>
+  <input id="name" placeholder="Tu nombre" />
+  <input id="whatsapp" placeholder="Tu WhatsApp (305...)" />
+  <input id="email" placeholder="Tu email" />
+  <button type="button" id="btnFundador">QUIERO SER FUNDADOR →</button>
+  <div id="successMsg" style="display:none;"></div>
+  <div id="cityCounts" style="margin-top:10px; font-size:12px;"></div>
+</div>
+</section>
+<script>
+(function(){
+  function getCityCount(city) {
+    return parseInt(localStorage.getItem('pegao_count_' + city) || '0', 10);
+  }
+  function cityLabel(city) {
+    if (city === 'cape-coral') return 'Cape Coral';
+    if (city === 'tampa') return 'Tampa';
+    return 'Miami';
+  }
+  function saveFounder() {
+    var city = document.getElementById('citySelect').value;
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var whatsapp = document.getElementById('whatsapp').value.trim();
+    if (!name || !email) return alert('Completa nombre y email');
+    var count = getCityCount(city) + 1;
+    if (count > 500) return alert('Ya somos 500 en ' + cityLabel(city) + '. Te ponemos en lista de espera.');
+    var tier = count <= 100 ? 'ORO' : count <= 300 ? 'PLATA' : 'BRONCE';
+    var benefit = tier === 'ORO' ? 'Premium de por vida' : tier === 'PLATA' ? '6 meses gratis + 50% off' : '3 meses gratis + 30% off';
+    var founder = {
+      name: name,
+      email: email,
+      whatsapp: whatsapp,
+      city: city,
+      number: count,
+      tier: tier,
+      benefit: benefit,
+      code: 'PEGAO-' + city.slice(0, 3).toUpperCase() + '-' + count + '-' + tier,
+      date: new Date().toISOString()
+    };
+    localStorage.setItem('pegao_count_' + city, String(count));
+    var db = JSON.parse(localStorage.getItem('pegao_founders_db') || '[]');
+    db.push(founder);
+    localStorage.setItem('pegao_founders_db', JSON.stringify(db));
+    localStorage.setItem('pegao_founder', JSON.stringify(founder));
+    var msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
+    msg.innerHTML = '🔥 Eres Fundador #' + count + ' de 500 en ' + cityLabel(city).toUpperCase() + ' - Nivel ' + tier +
+      '<br>Beneficio: ' + benefit +
+      '<br>Código: ' + founder.code +
+      '<br>Te avisamos automático a ' + email + " cuando salga Pega'o";
+    // TODO: supabase.from('founders').insert(founder)
+    updateCounts();
+  }
+  function updateCounts() {
+    var el = document.getElementById('cityCounts');
+    if (!el) return;
+    el.textContent = ['miami', 'tampa', 'cape-coral'].map(function(c) {
+      return cityLabel(c) + ': ' + getCityCount(c) + '/500';
+    }).join(' | ');
+  }
+  var btn = document.getElementById('btnFundador');
+  if (btn) btn.onclick = saveFounder;
+  updateCounts();
+})();
+</script>
 
     <section class="wrap section video-section" id="video" aria-labelledby="video-title">
   <p class="kicker" data-i18n="kVideoK">Míralo en acción</p>
